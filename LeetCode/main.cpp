@@ -26,27 +26,11 @@ public:
         return indexReturn;
     }
 
-    int reverse(int x) {
-        int target = x;
-        int result = 0;
-        long int presentResult=0;
-        while (target != 0) {
-            int temp = target%10;
-            presentResult = presentResult*10 + temp;
-            target = target / 10;
-            if ((presentResult / 10) == result) {
-                result = presentResult;
-            } else {
-                return 0;
-            }
-        }
-        return result;
-    }
 };
 
 int main() {
     Solution s;
-    /*vector<int > test;
+    vector<int > test;
     test.push_back(2);
     test.push_back(7);
     test.push_back(11);
@@ -54,7 +38,6 @@ int main() {
     vector<int> result = s.twoSum(test,9);
     for(int i=0;i<result.size();i++){
         cout << result[i]<< endl;
-    }*/
-    cout <<s.reverse(1534236469) << endl;
+    }
     return 0;
 }
