@@ -10,12 +10,7 @@ public:
         for(int i=0 ;i<nums.size();i++){
             indexReturn.at(0)=i;
             for(int j=i+1;j<nums.size();j++){
-                if((nums.at(i)+nums.at(j))< target){
-                    if(j<temp){
-                        indexReturn.at(1)=j;
-                    }
-
-                }else if((nums.at(i)+nums.at(j)) == target){
+                if((nums.at(i)+nums.at(j)) == target){
                     indexReturn.at(1)=j;
                     return indexReturn;
                 } else{
@@ -25,7 +20,6 @@ public:
         }
         return indexReturn;
     }
-
 };
 
 int main() {
